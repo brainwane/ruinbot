@@ -32,10 +32,27 @@ class Songs(Artifact):
     delay = 20
 
 class Books(Artifact):
-    items = [(2000, "Interpreter of Maladies"),
-             (2005, "Maximum City: Bombay Lost and Found"),
+    items = [(1983, "The Color Purple"),
+             (1985, "The Cider House Rules"),
+             (1988, "Beloved"),
+             (1989, "A Prayer for Owen Meany"),
+             (1992, "A Thousand Acres"),
+             (1994, "The Shipping News"),
+             (1998, "Tipping the Velvet"),
+             (1998, "The Poisonwood Bible"),
+             (2000, "Interpreter of Maladies"),
+             (2001, "The Amazing Adventures of Kavalier & Clay"),
+             (2002, "The Corrections"),
+             (2003, "Moneyball"),
+             (2003, "The Da Vinci Code"),
+             (2003, "The Devil Wears Prada"),
+             (2004, "He's Just Not That Into You"),
+             (2005, "Maximum City"),
+             (2005, "Freakonomics"),
+             (2005, "The Girl with the Dragon Tattoo"),
              (2007, "The Road"),
-             (2008, "Anathem"),
+             (2008, "The Brief Wondrous Life of Oscar Wao"),
+             (2010, "Eat Pray Love"),
              (2012, "The Pale King")]
 
     parodists = ["The Onion", "MAD Magazine", "The New Yorker"]
@@ -45,25 +62,35 @@ class Books(Artifact):
     delay = 40
 
 class Shows(Artifact):
-    items = [(1992, "Northern Exposure"),
+    items = [(1985, "Cheers"),
+             (1986, "The Cosby Show"),
+             (1987, "Night Court"),
+             (1988, "Murphy Brown"),
+             (1989, "The Wonder Years"),
+             (1992, "Northern Exposure"),
+             (1993, "Home Improvement"),
              (1994, "Frasier"),
              (1995, "NYPD Blue"),
              (1996, "3rd Rock From the Sun"),
+             (1997, "Seinfeld"),
              (1998, "The Practice"),
              (1999, "Ally McBeal"),
              (2001, "Will & Grace"),
              (2002, "Everybody Loves Raymond"),
+             (2003, "Six Feet Under"),
              (2004, "Arrested Development"),
              (2005, "Lost"),
              (2006, "24"),
              (2007, "The Sopranos"),
              (2009, "Big Love"),
-             (2010, "The Big Bang Theory")
+             (2010, "The Big Bang Theory"),
+             (2011, "American Horror Story"),
+             (2012, "Boardwalk Empire")
              ]
 
     parodists = ["the Muppets", "Saturday Night Live", "MAD Magazine", "Saturday morning cartoons"]
 
-    ruins = ["reboot", "film", "comic book-ify", "merchandise (with breakfast cereal and toys)"]
+    ruins = ["reboot", "film", "remake", "comic book-ify"]
 
     delay = 30
 
@@ -75,6 +102,6 @@ def horrorPredictionGenerator(categories):
         person = random.choice(genre.parodists)
         delay = genre.delay
         ruintype = random.choice(genre.ruins)
-        yield "In the year %s, %s will %s %s." % (delay+thing[0], person, ruintype, thing[1])
+        yield "In %s, %s will %s %s." % (delay+thing[0], person, ruintype, thing[1])
 
 genres = [Songs, Books, Shows]
