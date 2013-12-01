@@ -3,6 +3,8 @@
 # Songs, movies, hashtags, short stories
 
 import random
+import time
+from tweet import api
 
 class Artifact():
     # items with year; people; ruinations; delay
@@ -25,7 +27,7 @@ class Songs(Artifact):
              (2012, "Rolling in the Deep"),
              (2013, "We Are Young")]
 
-    parodists = ["the Muppets", "Glee: The Next Generation", "teenyboppers", "a teen heartthrob", "a tv ad", "morning drive DJs", "Muzak", "a stand-up comedian"]
+    parodists = ["the Muppets", "Glee: The Next Generation", "teenyboppers", "a teen heartthrob", "a tv ad", "morning drive DJs", "Muzak"]
 
     ruins = ["cover", "mashup", "sample", "co-opt", "ringtone-ify"]
 
@@ -105,3 +107,9 @@ def horrorPredictionGenerator(categories):
         yield "In %s, %s will %s %s." % (delay+thing[0], person, ruintype, thing[1])
 
 genres = [Songs, Books, Shows]
+
+hpg = horrorPredictionGenerator(genres)
+
+while True:
+    api.PostUpdate(hpg.next())
+    time.sleep(30*60)  # sleep 30 minutes
