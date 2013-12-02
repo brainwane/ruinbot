@@ -1,6 +1,9 @@
 #!/usr/bin/python
+# Copyright 2013 Sumana Harihareswara
+# GPL'd -- see COPYING
 # How long till cultural artifacts get ruined/covered/mashed up?
 # Songs, movies, hashtags, short stories
+# For use in @RuinRobot
 
 import random
 import time
