@@ -13,3 +13,5 @@ ignominious fates, and probable delays and mixes them into tweets such as:
 > In 2040, MAD Magazine will comic book-ify Interpreter of Maladies.
 
 > In 2033, Muzak will co-opt We Are Young.
+
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
