@@ -1,8 +1,8 @@
 Ruinbot
 =======
 
-Ruinbot uses [python-twitter](https://github.com/bear/python-twitter) to 
-produce [@RuinRobot](https://twitter.com/RuinRobot), a bot that tweets 
+Ruinbot used [python-twitter](https://github.com/bear/python-twitter) to 
+produce [@RuinRobot](https://twitter.com/RuinRobot), a bot that tweeted 
 predictions of wince-inducing covers, mashups, and remakes.
 
 The horror prediction generator grabs random titles, possible parodists and 
